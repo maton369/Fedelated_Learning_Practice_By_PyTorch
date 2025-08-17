@@ -1,0 +1,15 @@
+{
+  "client_id": "client1",
+  "server_url": "http://server:5000",
+  "local_epochs": 2,
+  "batch_size": 64,
+  "device": "cpu",
+  "max_rounds": 10,
+  "data_distribution": "non_iid",
+  "non_iid_alpha": 0.3,
+  "data_config": {
+    "data_dir": "/app/data",
+    "force_download": false,
+    "reuse_existing": true
+  }
+}

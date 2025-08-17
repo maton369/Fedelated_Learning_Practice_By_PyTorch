@@ -1,0 +1,48 @@
+{
+  "experiment_info": {
+    "client_id": "client2",
+    "experiment_id": "20250817_063429",
+    "timestamp": "2025-08-17T06:43:04.501073",
+    "device": "cpu",
+    "data_distribution": "non_iid",
+    "local_epochs": 2,
+    "batch_size": 64,
+    "total_samples": 30807,
+    "total_rounds": 2
+  },
+  "training_history": [
+    {
+      "loss": 1.4902602478830893,
+      "accuracy": 76.93056772811374,
+      "samples": 61614,
+      "timestamp": "2025-08-17T06:38:21.648372"
+    },
+    {
+      "loss": 1.0732346724146877,
+      "accuracy": 84.65121563281072,
+      "samples": 61614,
+      "timestamp": "2025-08-17T06:40:01.778382"
+    }
+  ],
+  "summary": {
+    "initial_accuracy": 76.93056772811374,
+    "final_accuracy": 84.65121563281072,
+    "initial_loss": 1.4902602478830893,
+    "final_loss": 1.0732346724146877,
+    "accuracy_improvement": 7.720647904696975,
+    "best_accuracy": 84.65121563281072,
+    "best_loss": 1.0732346724146877
+  },
+  "data_distribution_details": {
+    "0": 2117,
+    "1": 2867,
+    "2": 1727,
+    "3": 32,
+    "4": 5583,
+    "5": 5183,
+    "6": 5656,
+    "7": 951,
+    "8": 5049,
+    "9": 1642
+  }
+}

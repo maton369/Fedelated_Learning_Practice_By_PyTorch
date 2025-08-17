@@ -1,0 +1,33 @@
+{
+  "experiment_info": {
+    "experiment_id": "20250817_071452",
+    "timestamp": "2025-08-17T07:14:52.733510",
+    "total_rounds": 2,
+    "test_samples": 10000,
+    "aggregation_type": "async_federated_averaging",
+    "wait_for_all_clients": true
+  },
+  "evaluation_history": [
+    {
+      "round": 1,
+      "accuracy": 37.64,
+      "loss": 2.1720400731774827,
+      "timestamp": "2025-08-17T06:58:21.974858",
+      "test_samples": 10000
+    },
+    {
+      "round": 2,
+      "accuracy": 30.31,
+      "loss": 2.1332121589515785,
+      "timestamp": "2025-08-17T07:04:43.630650",
+      "test_samples": 10000
+    }
+  ],
+  "summary": {
+    "initial_accuracy": 37.64,
+    "final_accuracy": 30.31,
+    "best_accuracy": 37.64,
+    "best_loss": 2.1332121589515785,
+    "accuracy_improvement": -7.330000000000002
+  }
+}
