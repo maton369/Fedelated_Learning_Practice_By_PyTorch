@@ -1,0 +1,49 @@
+x-client-base: &client-base
+  build:
+    context: .
+    dockerfile: Dockerfile
+  volumes:
+    - ./clients:/app
+    - ./shared:/app/shared
+    - ./data:/app/data  # データ永続化
+    - ./results:/app/results  # 結果出力
+  environment:
+    - PYTHONUNBUFFERED=1
+  restart: on-failure:3
+
+services:
+  server:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: fl_server
+    ports:
+      - "5002:5000"
+    volumes:
+      - ./server:/app
+      - ./shared:/app/shared
+    environment:
+      - PYTHONUNBUFFERED=1
+    command: ["python", "server.py"]
+    restart: on-failure:3
+
+  client1:
+    <<: *client-base
+    container_name: fl_client1
+    depends_on:
+      - server
+    command: ["python", "client.py", "--config", "client_config/client1.json"]
+
+  client2:
+    <<: *client-base
+    container_name: fl_client2
+    depends_on:
+      - server
+    command: ["python", "client.py", "--config", "client_config/client2.json"]
+
+  client3:
+    <<: *client-base
+    container_name: fl_client3
+    depends_on:
+      - server
+    command: ["python", "client.py", "--config", "client_config/client3.json"]

@@ -1,0 +1,40 @@
+{
+  "system_config": {
+    "expected_clients": 3,
+    "max_rounds": 10,
+    "round_timeout": 300,
+    "server_port": 5002,
+    "data_distribution": "non_iid",
+    "non_iid_alpha": 0.3
+  },
+  "client_defaults": {
+    "local_epochs": 2,
+    "batch_size": 64,
+    "device": "cpu",
+    "max_retries": 3
+  },
+  "logging": {
+    "level": "INFO",
+    "buffer_size": 0,
+    "real_time": true
+  },
+  "fault_tolerance": {
+    "restart_policy": "on-failure:3",
+    "health_check_interval": 30,
+    "client_timeout": 120
+  },
+  "data_config": {
+    "dataset": "MNIST",
+    "data_dir": "/app/data",
+    "force_download": false,
+    "reuse_existing": true,
+    "download_train": true,
+    "download_test": true
+  },
+  "sync_config": {
+    "enabled": true,
+    "wait_for_all_clients": true,
+    "aggregation_interval": 30,
+    "auto_aggregation": true
+  }
+}

@@ -1,0 +1,9 @@
+torch==2.1.0
+torchvision==0.16.0
+flask              # サーバー側のAPI通信に必要
+requests           # クライアントからHTTPでサーバーと通信する
+tqdm               # 学習進捗バー
+numpy<2.0.0        # NumPy 2.x との互換性問題を避けるため
+matplotlib         # グラフ可視化用
+seaborn            # 統計グラフ可視化用
+pandas             # データ処理用
